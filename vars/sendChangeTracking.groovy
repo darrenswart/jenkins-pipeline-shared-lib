@@ -32,7 +32,7 @@ def call(Map change) {
   }
   if (problem) {
     currentBuild.result = 'ABORTED'
-    error("Aborting unable to send change tracking notification.  See PROBLEMS listed in the log.")
+    error("Aborting unable to send change tracking notification as validation failed.  See PROBLEMS listed in the log.")
   }
   println "Change tracking validation complete."
   println "change id  = " + change.changeId
